@@ -39,6 +39,11 @@ express()
 // doesn't work
   .delete("/delete-favorite/:id", deleteFavorite)
 
-  .listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+  //test
+  .get('/',(req,res)=>{
+    res.send("hello from server");
+  })
+
+  .listen(process.env.PORT||4000, () => {
+    console.log(`HELLO SERVER IS OK`);
   });
