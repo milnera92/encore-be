@@ -95,7 +95,7 @@ const getSearchArtist = async (req, res) => {
       decompress: true,
     };
 
-    const url = `https://api.setlist.fm/rest/1.0/search/artists?artistName=${search}&p=1&sort=sortName`;
+    const url = `https://api.setlist.fm/rest/1.0/search/artists?artistName=${search}&p=1&sort=relevance`;
 
     const result = await axios.get(url, options);
 
